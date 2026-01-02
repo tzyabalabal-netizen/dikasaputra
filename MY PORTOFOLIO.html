@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio • Dika Saputra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f9fafc;          /* Latar belakang cerah */
+      --text:#222;           /* Teks utama gelap */
+      --muted:#555;          /* Teks sekunder */
+      --primary:#ff6f61;     /* Coral cerah */
+      --accent:#4a90e2;      /* Biru cerah */
+      --card:#ffffff;        /* Kartu putih */
+      --border:#e0e0e0;
+      --radius:12px;
+      --shadow:0 4px 12px rgba(0,0,0,0.08);
+      --max:1000px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Inter",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      scroll-behavior:smooth;
+    }
+    header{
+      position:sticky;top:0;z-index:50;
+      background:#fff;
+      border-bottom:1px solid var(--border);
+    }
+    .nav{max-width:var(--max);margin:0 auto;padding:8px 16px;
+      display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;font-size:18px;color:var(--primary)}
+    nav a{color:var(--text);text-decoration:none;font-weight:600;margin-left:10px}
+    nav a:hover{color:var(--accent)}
+
+    .container{max-width:var(--max);margin:0 auto;padding:20px 16px}
+    .card{background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)}
+
+    h1,h2{margin-top:0;margin-bottom:8px}
+    .section{padding:28px 0}
+    .muted{color:var(--muted);margin:4px 0;line-height:1.4}
+
+    /* Timeline */
+    .timeline{position:relative;padding-left:16px}
+    .timeline::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--border)}
+    .item{position:relative;margin-bottom:8px}
+    .dot{position:absolute;left:-10px;top:4px;width:10px;height:10px;border-radius:50%;
+      background:var(--accent)}
+    .item h4{margin:0 0 2px;font-size:15px;color:var(--primary)}
+
+    /* Animasi scroll */
+    .reveal{opacity:0;transform:translateY(10px);transition:all .5s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    footer{padding:16px;text-align:center;color:var(--muted);border-top:1px solid var(--border);font-size:13px;background:#fff}
+    .contact{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+    .chip{padding:6px 10px;border-radius:999px;background:#f0f0f0;
+      border:1px solid var(--border);color:var(--text);text-decoration:none;font-weight:600;font-size:13px}
+    .chip:hover{background:#e8e8e8}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav">
+      <div class="brand">Dika Saputra</div>
+      <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="container">
+    <div class="card reveal">
+      <h1>Selamat datang di portofolio saya</h1>
+      <p class="muted">Saya seorang profesional di bidang jaringan dan teknologi informasi, dengan pengalaman mendalam dalam splicing fiber optic, troubleshooting, serta pengembangan web modern. Portofolio ini menampilkan kompetensi teknis sekaligus sisi kreatif saya.</p>
+    </div>
+  </div>
+
+  <!-- Tentang -->
+  <section id="tentang" class="section">
+    <div class="container">
+      <div class="card reveal">
+        <h2>Tentang Saya</h2>
+        <p class="muted">Saya memiliki latar belakang sebagai teknisi jaringan dengan fokus pada fiber optic. Ketelitian dalam pekerjaan lapangan saya kombinasikan dengan kemampuan desain web untuk membangun identitas digital yang profesional. Prinsip kerja saya adalah integritas, efisiensi, dan kualitas hasil.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pengalaman -->
+  <section id="pengalaman" class="section">
+    <div class="container">
+      <div class="card reveal">
+        <h2>Pengalaman Profesional</h2>
+        <div class="timeline">
+          <div class="item reveal">
+            <span class="dot"></span>
+            <h4>Fiber Optic Jointer</h4>
+            <p class="muted">Splicing, pengukuran OTDR, dan dokumentasi teknis untuk memastikan kualitas jaringan.</p>
+          </div>
+          <div class="item reveal">
+            <span class="dot"></span>
+            <h4>Network Implementation</h4>
+            <p class="muted">Instalasi, konfigurasi, dan troubleshooting jaringan sesuai standar industri.</p>
+          </div>
+          <div class="item reveal">
+            <span class="dot"></span>
+            <h4>Web Designer</h4>
+            <p class="muted">Membangun website dengan desain modern, interaktif, dan berfokus pada branding profesional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="section">
+    <div class="container">
+      <div class="card reveal">
+        <h2>Kontak</h2>
+        <p class="muted">Hubungi saya untuk kolaborasi, proyek, atau diskusi profesional.</p>
+        <div class="contact">
+          <a class="chip" href="https://wa.me/6283114798449" target="_blank">WhatsApp: 083114798449</a>
+          <a class="chip" href="https://instagram.com/dika_saputra" target="_blank">Instagram: dika_saputra</a>
+          <a class="chip" href="mailto:tzyabalabal@gmail.com">Email: tzyabalabal@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Dika Saputra • Portofolio Profesional
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
